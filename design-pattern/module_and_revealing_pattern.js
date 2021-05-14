@@ -13,3 +13,24 @@ const headingChanger = (function () {
   };
 })();
 headingChanger.changeHeading();
+
+const itemController = (function () {
+  const items = [];
+  function add(item) {
+    items.push(item);
+    console.log("Item added!!", items);
+  }
+  function get(id) {
+    return items.find((ele) => ele.id === id);
+  }
+  return {
+    add,
+    get,
+  };
+})();
+
+itemController.add({ id: 1, name: "Hemant" });
+itemController.add({ id: 2, name: "Ravi" });
+
+const getUser = itemController.get(1);
+console.log(getUser);
