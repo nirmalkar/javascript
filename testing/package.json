@@ -1,0 +1,16 @@
+{
+    "version": "0.0.0",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "serve": "vite preview",
+        "test": "jest --watchAll --verbose coverage"
+    },
+    "devDependencies": {
+        "@types/jest": "^26.0.23",
+        "vite": "^2.3.5"
+    },
+    "dependencies": {
+        "jest": "^27.0.4"
+    }
+}
