@@ -50,7 +50,7 @@ console.log(totalPrice)
 
 const reducedItemObj = items.reduce((groupedItems, item) => {
     const price = item.price
-if(groupedItems[price] == null) groupedItems[price] = []
+if(groupedItems[price] === undefined) groupedItems[price] = []
 groupedItems[price].push(item)
 return groupedItems
 },{})
