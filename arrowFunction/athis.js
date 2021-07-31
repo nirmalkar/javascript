@@ -20,4 +20,21 @@ someObj.myFunction()
 
 const test2 = someObj.myFunction2
 console.log(test2().myFunction3());
-// if any function is invoked without object it would be having global this
+// // if any function is invoked without object it would be having global this
+
+function myFunc() {
+    return this
+}
+const f = new myFunc()
+f.a = 10
+f.b = 20
+console.log(f);
+
+const obj ={
+    simple(){
+        return this
+    }
+}
+console.log(obj.simple() === globalThis);
+const t = obj.simple
+console.log(t() === globalThis);
