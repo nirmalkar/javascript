@@ -1,7 +1,7 @@
 // aero function is not hoisted
 
 const obj = {
-    name:"hemant",
+    name:"JOHN",
     someMethod(){
         this.name = "Hemant"
         return this
