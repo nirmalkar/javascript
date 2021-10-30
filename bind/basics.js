@@ -9,13 +9,12 @@ const someObj = {
         const profession = this.profession
         return `Hi my name is ${name}, I am a ${profession} and I am ${age} years old.`
     },
-    getHobbiesAndInterests: () => {
-        console.log(this.hobbies)
-        return `My hobbies are ${this.hobbies[0]}`
-    },
 }
 
-const intro = someObj.getIntro
-console.log(intro())
-const johnsIntro = intro.bind(someObj)
-console.log(johnsIntro())
+const intro = someObj.getIntro()
+console.log(intro) //output
+const intro2 = someObj.getIntro
+console.log(intro2()) //output
+
+// const johnsIntro = intro.bind(someObj)
+// console.log(johnsIntro())
