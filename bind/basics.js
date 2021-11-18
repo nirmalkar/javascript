@@ -16,5 +16,5 @@ console.log(intro) //output
 const intro2 = someObj.getIntro
 console.log(intro2()) //output
 
-// const johnsIntro = intro.bind(someObj)
-// console.log(johnsIntro())
+const johnsIntro = intro.bind(someObj)
+console.log(johnsIntro())
