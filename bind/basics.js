@@ -1,3 +1,4 @@
+//Bind does not gets invoked immediately, it can be invoked later.
 const someObj = {
     userName: 'John doe',
     age: 28,
@@ -16,5 +17,5 @@ console.log(intro) //output
 const intro2 = someObj.getIntro
 console.log(intro2()) //output
 
-const johnsIntro = intro.bind(someObj)
+const johnsIntro = intro2.bind(someObj)
 console.log(johnsIntro())
