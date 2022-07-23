@@ -7,7 +7,7 @@ class someClass {
 
 console.log(someClass.a)
 
-Top level await
+// Top level await
 const a = await fetch('https://jsonplaceholder.typicode.com/todos')
 console.log(a)
 
@@ -26,3 +26,7 @@ const obj = {
 
 console.log(Object.hasOwn('obj', 'a'))
 // console.log(obj.hasOwnProperty('a'))
+async function test() {
+    const a = await fetch('https://jsonplaceholder.typicode.com/todos')
+    console.log(a)
+}

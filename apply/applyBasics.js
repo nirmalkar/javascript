@@ -14,7 +14,7 @@ function giveDescription(purposesOne, purposesTwo) {
         this.madeOf +
         ' and it has various purpose like ' +
         purposesOne +
-        ' ' +
+        ', ' +
         purposesTwo +
         '.'
     )

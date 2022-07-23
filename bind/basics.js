@@ -13,9 +13,9 @@ const someObj = {
 }
 
 const intro = someObj.getIntro()
-console.log(intro) //output
+console.log('Case 1', intro) //output
 const intro2 = someObj.getIntro
-console.log(intro2()) //output
+console.log('Case 2', intro2()) //output
 
 const johnsIntro = intro2.bind(someObj)
-console.log(johnsIntro())
+console.log('Case 3', johnsIntro())

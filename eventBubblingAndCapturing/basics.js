@@ -18,23 +18,22 @@ container.addEventListener(
 btn.addEventListener(
     'click',
     (e) => {
-        console.log(this)
         console.log('button')
         e.stopPropagation()
     }
     // here we are not passing true or false at the third argument so, this onclick function would bubbled up.
 )
-container.addEventListener(
-    'click',
-    () => {
-        console.log('outer div')
-    },
-    true // we are passing true at the third argument so, this onclick function would work as event capturing.
-)
-btn.addEventListener(
-    'click',
-    () => {
-        console.log('btn')
-    },
-    true // we are passing true at the third argument so, this onclick function would work as event capturing.
-)
+// container.addEventListener(
+//     'click',
+//     () => {
+//         console.log('outer div')
+//     },
+//     true // we are passing true at the third argument so, this onclick function would work as event capturing.
+// )
+// btn.addEventListener(
+//     'click',
+//     () => {
+//         console.log('btn')
+//     },
+//     true // we are passing true at the third argument so, this onclick function would work as event capturing.
+// )

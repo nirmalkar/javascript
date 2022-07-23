@@ -1,3 +1,4 @@
+// There are two ways of doing curring one way is through closure and the another is through bind method.
 /**
  *
  * @param {number} a
@@ -8,12 +9,12 @@
 function addOne(a) {
     return (b) => {
         return (c) => {
-            return a + b + c;
-        };
-    };
+            return a + b + c
+        }
+    }
 }
 
-addOne(1)(2)(3);
+addOne(1)(2)(3)
 
 /**
  *
@@ -23,11 +24,11 @@ addOne(1)(2)(3);
  */
 function addTwo(a, b) {
     return function (c, d) {
-        return a + b + c + d;
-    };
+        return a + b + c + d
+    }
 }
 
-addTwo(1, 2)(3, 4);
+addTwo(1, 2)(3, 4)
 /**
  *
  * @param {number} a
@@ -37,27 +38,27 @@ addTwo(1, 2)(3, 4);
 function addThree(a) {
     return function (b) {
         if (b) {
-            return addThree(a + b);
+            return addThree(a + b)
         }
-        return a;
-    };
+        return a
+    }
 }
 
-addThree(3)(2)(1)();
+addThree(3)(2)(1)()
 /**
  *
  * @param  {...any} args
  * @returns sum of all the numbers
  */
 function addFour(...args) {
-    let a = args.reduce((a, b) => a + b, 0);
+    let a = args.reduce((a, b) => a + b, 0)
     return function (...args) {
-        let b = args.reduce((a, b) => a + b, 0);
+        let b = args.reduce((a, b) => a + b, 0)
         if (b) {
-            return addFour(a + b);
+            return addFour(a + b)
         }
-        return a;
-    };
+        return a
+    }
 }
 
-addFour(1, 2, 5, 6)(1, 2, 5, 6)();
+console.log(addFour(1)(1)())
