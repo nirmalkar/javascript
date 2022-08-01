@@ -2,6 +2,11 @@
  * Higher order functions: A function that accepts another function as parameter or returns a function is called as HOFs.
  * let's take an example of calculating area, circumference, diameter, area of sector of a circle.
  */
+/**
+ *
+ * @param {Number} radius
+ * @returns Area of circles
+ */
 
 function calcArea(radius) {
     if (!radius || radius < 0) return 'Please pass radius as parameter!'
@@ -10,7 +15,7 @@ function calcArea(radius) {
 /**
  *
  * @param {number} radius
- * @returns
+ * @returns circumference of circle
  */
 function calcCircumference(radius) {
     if (!radius || radius < 0) return 'Please pass radius as parameter!'
@@ -20,7 +25,7 @@ function calcCircumference(radius) {
  * Area of sector calculation
  * @param {number} radius - First parameter should be the radius of circle
  * @param {number} angelOfSector - Second parameter should be the angle of sector of circle
- * @returns
+ * @returns Area of sector of given circle
  */
 function calcAreaOfSector(radius, angelOfSector) {
     if (angelOfSector > 360 || angelOfSector < 0 || !radius || !angelOfSector)
@@ -30,7 +35,7 @@ function calcAreaOfSector(radius, angelOfSector) {
 /**
  * Diameter of circle
  * @param {number} radius - the radius of circle
- * @returns
+ * @returns diameters of circle
  */
 function calcDiameter(radius) {
     if (!radius) return 'Please pass radius as parameter'
